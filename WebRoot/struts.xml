@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" 
+"http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<constant name="struts.objectFactory" value="spring" />
+	<!-- 登录 -->
+	<constant name="struts.objectFactory.spring.autoWire" value="name" />
+	<package name="default" extends="struts-default">
+		<action name="doLogin" class="umAction" method="login">
+			<result name="success">/index.jsp</result>
+			<result name="error">/error.jsp</result>
+		</action>
+	</package>
+	<!-- 注册 -->
+	<package name="com.register" extends="struts-default">
+		<action name="doRegister" class="umAction" method="register">
+			<result name="success">/registersuccess.jsp</result>
+			<result name="error">/registererror.jsp</result>
+		</action>
+	</package>
+	
+	<!-- 旅行社查询 -->
+	<package name="com.travelagency.search" extends="struts-default">
+		<action name="doTravelAgencySearch" class="tAAction" method="search">
+			<result name="success">./TravelAgency/findsuccess.jsp</result>
+			<result name="error">./TravelAgency/finderror.jsp</result>
+		</action>
+		<action name="doListTravelAgency" class="tAAction" method="listTravelAgency">
+			<result name="list">./TravelAgency/findsuccess.jsp</result>
+			<result name="error">./TravelAgency/finderror.jsp</result>
+		</action>
+	</package>
+</struts>    

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="SSH_SECENTIC_SYSTEM"
+  id="myeclipse.1441508074899"
+  context-root="/SSH_SECENTIC_TEST"
+  j2ee-spec="6.0"
+  archive="SSH_SECENTIC_SYSTEM.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+
